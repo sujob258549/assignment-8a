@@ -1,0 +1,19 @@
+a.active {
+    border: 2px solid #23BE0A;
+    color: #23BE0A;
+   
+}
+
+a:hover {
+    background-color: #23BE0A;
+    color: #fff;
+}
+
+a {
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: #000;
+    list-style: none;
+    text-decoration: none;
+    margin-right: 15px;
+}
