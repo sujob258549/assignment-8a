@@ -5,13 +5,13 @@ import { NavLink } from "react-router-dom";
 import './home.css'
 
 const HomeBook = ({ book }) => {
-    const { bookId, image, rating, category, tags, publisher, yearOfPublishingbookName, bookName, author } = book;
+    const { bookId, image, rating, category, tags, bookName, author } = book;
     return (
         <div className="">
             <NavLink to={`/book/${bookId}`}>
                 <div className="card shadows">
                     <div className="bg-slate-200 px-10 mt-10 rounded-lg mx-10">
-                        <figure><img className=" w-48" src={image} alt="Shoes" /></figure>
+                        <figure><img className=" w-full " src={image} alt="Shoes" /></figure>
                     </div>
                     <div className="card-body gap-0">
                         <div className="flex gap-3 flex-wrap">
