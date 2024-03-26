@@ -10,7 +10,7 @@ const Banner = () => {
             <button className="texts-xl hover:text-[#23BE0A] hover:border-[#23BE0A] bg-[#23BE0A] text-white text-xl btn font-bold">View The List</button>
             </div>
             <div className=' flex-1 text-center md:text-start'>
-                <img className='' src={banner} alt="" />
+                <img className='w-full md:w-[350px]' src={banner} alt="" />
             </div>
         </div>
         </div>

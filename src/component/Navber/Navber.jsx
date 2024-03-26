@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
-import './style.css'
+import './nav.css'
 
 const Navber = () => {
     const navLink = <>
-    <NavLink className={'text-[18px] font-medium '} to={'/'}>Home</NavLink>
-    <NavLink className={'text-[18px] font-medium '} to={'/Listed'}>Listed Books</NavLink>
-    <NavLink className={'text-[18px] font-medium '} to={'/PagestoRead'}>Pages to Read</NavLink>
+    <NavLink className={'text-[18px]  font-medium navber'} to={'/'}>Home</NavLink>
+    <NavLink className={'text-[18px]  font-medium navber'} to={'/Listed'}>Listed Books</NavLink>
+    <NavLink className={'text-[18px]  font-medium navber'} to={'/PagestoRead'}>Pages to Read</NavLink>
     </>
     return (
         <div>

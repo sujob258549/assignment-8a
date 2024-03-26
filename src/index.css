@@ -14,3 +14,13 @@ body{
 .playfair{
   font-family: "Playfair Display SC", serif;
 }
+.shadows{
+  box-shadow: 1px 1px 10px;
+}
+
+.tColor{
+  color: #23BE0A;
+}
+.bgColor{
+ background-color: #23BE0A;
+}

@@ -10,6 +10,7 @@ import Hader from './component/Hader/Hader.jsx';
 import Home from './component/Home/Home.jsx';
 import Books from './component/Books/Books.jsx';
 import PagestoRead from './component/Pages-to-Read/PagestoRead.jsx';
+import Detailpage from './component/Detailpage/Detailpage.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,7 +18,15 @@ const router = createBrowserRouter([
     children: [
      {
       path: '/',
+      loader: ()=> fetch('../public/book.json'),
       element: <Home></Home>
+      
+     },
+     {
+      path: '/book/:id',
+      loader: ()=> fetch('../public/book.json'),
+      element: <Detailpage></Detailpage>
+      
      },
      {
       path: '/Listed',
