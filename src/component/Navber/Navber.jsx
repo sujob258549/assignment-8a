@@ -30,8 +30,8 @@ const Navber = () => {
                         }
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <button className="btn text-[18px] font-medium text-white border hover:text-[#23BE0A] mr-3 bg-[#23BE0A]">Sign In</button>
+                <div className="navbar-end flex flex-wrap gap-5">
+                    <button className="btn text-[18px] font-medium text-white border hover:text-[#23BE0A]  bg-[#23BE0A]">Sign In</button>
                     <button className="btn text-[18px] font-medium text-white border hover:text-[#59C6D2] bg-[#59C6D2]">Sign Up</button>
                 </div>
             </div>
