@@ -10,7 +10,8 @@
       "category": "Fiction",
       "tags": ["Classic", "Romance", "Tragedy"],
       "publisher": "Charles Scribner's Sons",
-      "yearOfPublishing": 1925
+      "yearOfPublishing": 1925,
+      "location": "London, Katmondu, SL"
     },
     {
       "bookId": 2,
@@ -23,7 +24,8 @@
       "category": "Food",
       "tags": ["Classic", "Legal Drama", "Coming-of-Age"],
       "publisher": "J. B. Lippincott & Co.",
-      "yearOfPublishing": 1960
+      "yearOfPublishing": 1960,
+      "location": "London, England, UK"
     },
     {
       "bookId": 3,
@@ -36,7 +38,8 @@
       "category": "Bangla",
       "tags": ["Classic", "Coming-of-Age"],
       "publisher": "Little, Brown and Company",
-      "yearOfPublishing": 1951
+      "yearOfPublishing": 1951,
+      "location": "London, Reade, Pakistan"
     },
     {
       "bookId": 4,
@@ -49,7 +52,8 @@
       "category": "Fiction",
       "tags": ["Dystopian", "Political", "Social Commentary"],
       "publisher": "Secker & Warburg",
-      "yearOfPublishing": 1949
+      "yearOfPublishing": 1949,
+      "location": "London, Dilli, India"
     },
     {
       "bookId": 5,
@@ -62,7 +66,8 @@
       "category": "Travel",
       "tags": ["Classic", "Romance", "Satire"],
       "publisher": "T. Egerton, Whitehall",
-      "yearOfPublishing": 1813
+      "yearOfPublishing": 1813,
+      "location": "London, dhaka, BD"
     },
     {
       "bookId": 6,
@@ -75,6 +80,7 @@
       "category": "Fantasy",
       "tags": ["Adventure", "Epic", "Middle-earth"],
       "publisher": "Allen & Unwin",
-      "yearOfPublishing": 1937
+      "yearOfPublishing": 1937,
+      "location": "London, England, UK"
     }
   ]
