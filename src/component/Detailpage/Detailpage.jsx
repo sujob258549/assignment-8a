@@ -1,24 +1,26 @@
 import { useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { setRedStore } from "../Localstorage/readData";
 
 
 const Detailpage = () => {
     const books = useLoaderData();
     const { id } = useParams();
+    const parsid = parseInt(id);
     const book = books.find(book => book.bookId === parseInt(id));
     console.log(book, id)
 
     const [wistlist, setwistlist] = useState(0);
 
     const handelwishlist = () => {
-        setwistlist( wistlist + 1);
-        if (wistlist < 1 ) {
-            toast('Alrady add wistlish');
-        }
-       
+        setwistlist(wistlist + 1);
+        // if (wistlist < 1 ) {
+        // }
 
+        toast('Alrady add wistlish');
+        setRedStore(parsid)
     }
     return (
         <div>
@@ -54,8 +56,8 @@ const Detailpage = () => {
                         <p className="text-sm font-medium flex">Rating:<span className="font-bold ml-28">{book.rating}</span> </p>
 
                         <div className=" flex flex-wrap gap-5 mt-10">
-                            <button className="btn text-[18px] font-medium hover:text-white px-5 text-[#59C6D2] border hover:bg-[#59C6D2]  border-[#59C6D2]">Read</button>
-                            <button onClick={() => handelwishlist()} className="btn  text-[18px] font-medium text-white border px-5 hover:text-[#59C6D2] bg-[#59C6D2]">Wishlist</button>
+                            <Link onClick={() => handelwishlist()} className="btn text-[18px] font-medium hover:text-white px-5 text-[#59C6D2] border hover:bg-[#59C6D2]  border-[#59C6D2]">Read</Link>
+                            <Link className="btn  text-[18px] font-medium text-white border px-5 hover:text-[#59C6D2] bg-[#59C6D2]">Wishlist</Link>
                         </div>
                     </div>
                     <ToastContainer></ToastContainer>
