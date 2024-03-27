@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import HomeBook from "../HomeBook/HomeBook";
 
+
 const Home = () => {
     const books = useLoaderData();
     return (
@@ -15,6 +16,7 @@ const Home = () => {
                     }
                 </div>
             </div>
+           
         </div>
     );
 };

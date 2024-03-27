@@ -14,6 +14,7 @@ import Detailpage from './component/Detailpage/Detailpage.jsx';
 import Errorpage from './component/Errorpage/Errorpage.jsx';
 import Read from './component/Read/Read.jsx';
 import Wishlish from './component/Wishlish/Wishlish.jsx';
+import About from './component/About/About.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +25,12 @@ const router = createBrowserRouter([
         path: '/',
         loader: () => fetch('../public/book.json'),
         element: <Home></Home>
+
+      },
+      {
+        path: '/about',
+        loader: () => fetch('../public/book.json'),
+        element: <About></About>
 
       },
       {

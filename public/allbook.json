@@ -1,0 +1,194 @@
+[
+    {
+        "bookId": 1,
+        "bookName": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "image": "https://example.com/the-catcher-in-the-rye.jpg",
+        "review": "A poignant coming-of-age story with a unique voice.",
+        "totalPages": 224,
+        "rating": 4.3,
+        "category": "Fiction",
+        "tags": [
+            "Coming-of-age",
+            "Literary Fiction"
+        ],
+        "publisher": "Little, Brown and Company",
+        "yearOfPublishing": 1951
+    },
+    {
+        "bookId": 2,
+        "bookName": "1984",
+        "author": "George Orwell",
+        "image": "https://example.com/1984.jpg",
+        "review": "A chilling dystopian vision that remains relevant today.",
+        "totalPages": 328,
+        "rating": 4.7,
+        "category": "Fiction",
+        "tags": [
+            "Dystopian",
+            "Political"
+        ],
+        "publisher": "Secker & Warburg",
+        "yearOfPublishing": 1949
+    },
+    {
+        "bookId": 3,
+        "bookName": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "image": "https://example.com/to-kill-a-mockingbird.jpg",
+        "review": "A timeless exploration of racial injustice and moral growth.",
+        "totalPages": 324,
+        "rating": 4.8,
+        "category": "Fiction",
+        "tags": [
+            "Classic",
+            "Social Justice"
+        ],
+        "publisher": "J. B. Lippincott & Co.",
+        "yearOfPublishing": 1960
+    },
+    {
+        "bookId": 4,
+        "bookName": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "image": "https://example.com/the-great-gatsby.jpg",
+        "review": "A compelling portrayal of the Jazz Age.",
+        "totalPages": 180,
+        "rating": 4.5,
+        "category": "Fiction",
+        "tags": [
+            "Classic",
+            "Romance"
+        ],
+        "publisher": "Scribner",
+        "yearOfPublishing": 1925
+    },
+    {
+        "bookId": 5,
+        "bookName": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "image": "https://example.com/pride-and-prejudice.jpg",
+        "review": "A delightful comedy of manners with unforgettable characters.",
+        "totalPages": 279,
+        "rating": 4.9,
+        "category": "Fiction",
+        "tags": [
+            "Romance",
+            "Classic"
+        ],
+        "publisher": "T. Egerton, Whitehall",
+        "yearOfPublishing": 1813
+    },
+    {
+        "bookId": 6,
+        "bookName": "Moby-Dick",
+        "author": "Herman Melville",
+        "image": "https://example.com/moby-dick.jpg",
+        "review": "An epic tale of obsession and revenge on the high seas.",
+        "totalPages": 635,
+        "rating": 4.6,
+        "category": "Fiction",
+        "tags": [
+            "Adventure",
+            "Classic"
+        ],
+        "publisher": "Richard Bentley",
+        "yearOfPublishing": 1851
+    },
+    {
+        "bookId": 7,
+        "bookName": "Frankenstein",
+        "author": "Mary Shelley",
+        "image": "https://example.com/frankenstein.jpg",
+        "review": "A groundbreaking work of gothic fiction that explores the ethics of creation.",
+        "totalPages": 280,
+        "rating": 4.4,
+        "category": "Fiction",
+        "tags": [
+            "Gothic",
+            "Science Fiction"
+        ],
+        "publisher": "Lackington, Hughes, Harding, Mavor, & Jones",
+        "yearOfPublishing": 1818
+    },
+    {
+        "bookId": 8,
+        "bookName": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "image": "https://example.com/the-lord-of-the-rings.jpg",
+        "review": "A sweeping fantasy epic with rich world-building and unforgettable characters.",
+        "totalPages": 1178,
+        "rating": 4.9,
+        "category": "Fantasy",
+        "tags": [
+            "Epic",
+            "Adventure"
+        ],
+        "publisher": "Allen & Unwin",
+        "yearOfPublishing": 1954
+    },
+    {
+        "bookId": 9,
+        "bookName": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "image": "https://example.com/crime-and-punishment.jpg",
+        "review": "An intense psychological exploration of guilt and redemption.",
+        "totalPages": 430,
+        "rating": 4.7,
+        "category": "Fiction",
+        "tags": [
+            "Psychological",
+            "Classic"
+        ],
+        "publisher": "The Russian Messenger",
+        "yearOfPublishing": 1866
+    },
+    {
+        "bookId": 10,
+        "bookName": "Brave New World",
+        "author": "Aldous Huxley",
+        "image": "https://example.com/brave-new-world.jpg",
+        "review": "A dystopian masterpiece that critiques the dangers of a totalitarian society.",
+        "totalPages": 288,
+        "rating": 4.5,
+        "category": "Fiction",
+        "tags": [
+            "Dystopian",
+            "Science Fiction"
+        ],
+        "publisher": "Chatto & Windus",
+        "yearOfPublishing": 1932
+    },
+    {
+        "bookId": 11,
+        "bookName": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "image": "https://example.com/the-hobbit.jpg",
+        "review": "An enchanting tale of adventure and friendship.",
+        "totalPages": 310,
+        "rating": 4.6,
+        "category": "Fantasy",
+        "tags": [
+            "Adventure",
+            "Middle Earth"
+        ],
+        "publisher": "Allen & Unwin",
+        "yearOfPublishing": 1937
+    },
+    {
+        "bookId": 12,
+        "bookName": "Dracula",
+        "author": "Bram Stoker",
+        "image": "https://example.com/dracula.jpg",
+        "review": "A gothic horror classic that has stood the test of time.",
+        "totalPages": 418,
+        "rating": 4.4,
+        "category": "Fiction",
+        "tags": [
+            "Gothic",
+            "Horror"
+        ],
+        "publisher": "Archibald Constable and Company",
+        "yearOfPublishing": 1897
+    }
+]

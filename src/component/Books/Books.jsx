@@ -4,6 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 
 const Books = () => {
 
+ 
     const [tab, setTab] = useState(0);
     return (
         <div>
@@ -14,8 +15,9 @@ const Books = () => {
                 <div className="w-32 mx-auto z-50 ">
                     <select className="select w-full max-w-xs bgColor text-xl text-white font-medium">
                         <option disabled selected className="text-xl font-medium">Sort By</option>
-                        <option>Homer</option>
-                        <option>Marge</option>
+                        <option>Rating</option>
+                        <option>Number of pages</option>
+                        <option>Publisher year</option>
                     </select>
                 </div>
 
