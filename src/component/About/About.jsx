@@ -1,67 +1,66 @@
+import { useLoaderData } from "react-router-dom";
+import DetalAbout from "./DetalAbout";
+import { useState } from "react";
+
 const About = () => {
+    const [slise, setslise] = useState(3);
+    const allBooks = useLoaderData();
+   
+
     return (
         <div>
             <h5 className="text-3xl md:text-5xl -mb-0 text-center">This is about</h5>
-            <p className="text-[18px]">He has a world of secrets in his eyes and the weight of the world on his shoulders. I should stay away from him, but the more I try, the more consumed he gets.
+            <p className="text-[15px] pb-5 md:pb-10">
+                <h5>গল্প ১</h5>
+                শাহেদ আমাকে কেন ডালিম কাকার কথা জিজ্ঞেস করছে সেটা কিছুতেই বুঝতে পারলাম না। স্কুলের মেইন গেটের দারোয়ান ডালিম কুমার খুন হয়েছে গত শনিবার রাতে। আমরা সবাই তাকে ডালিম কাকা বলে ডাকতাম। অসম্ভব ভালো মানুষ ছিলেন কাকা। ফুটবল খেলা থেকে শুরু করে স্কুলের পুকুরে একসাথে সাঁতারও কেটেছেন তিনি আমাদের সাথে। সেই পুকুরেই কাকার লাশ পাওয়া গেছে।
+                আমাকে চুপ করে থাকতে দেখে শাহেদ কি বললো জানি না। কিছুক্ষণ চুপ থেকে আবারও একটা অদ্ভুত প্রশ্ন করল।
+                ডালিম কাকাকে কে খুন করেছে জানিস
+                কে?
+                আমাদের বাংলা স্যার। মেইন গেটের আরেক দারোয়ান আছে না ছোকরা টাইপের? রমিজ মিয়া নাম যে? সেও সাথে ছিল।
+                কথাগুলো শুনে আমার অবাক হওয়ার কথা। কিন্তু আমি ফিক করে হেসে দিলাম। বাংলা স্যার কে দেখলেই বোঝা যায় দুনিয়ার ভোলা সে। সেই লোক নাকি খুন করেছে।
+                তোকে একটা কথা বলি।
+            বল।
+                শাহেদ ভালো করেই বুঝে গেছে আমি ওর একটা কথাও বিশ্বাস করছি না। এখন ওর কাজ হবে আমাকে কথাগুলো বিশ্বাস করানো। ও আমাকে কিভাবে বিশ্বাস করায় সেই অপেক্ষায় থাকলাম।
+                আমি যা চাই তা-ই হয় জানিস
+                মানে?
+                মানে দেখছিস না গত দুই মাস ধরে আমি প্রতি পরীক্ষায় ফার্স্ট হচ্ছি? কিভাবে হচ্ছি বুঝিসনি?
+                মানে এখন আমাকে বিশ্বাস করতে হচ্ছে যে, তোর কোনো অলৌকিক ক্ষমতার বলে তুই প্রতি পরীক্ষায় ফার্স্ট হচ্ছিস
+            হ্যাঁ।
+                ওর কথা যে এখনো বিশ্বাস করছি না সেটা বোঝানোর জন্য আমি আমার হাসিমুখ বজায় রাখলাম।
+                গল্প- মৃত্যু চেয়েছি বলে
+                বই- যেখানে মৃত্যুবরণ পাপ
+                জনরা- গল্পগ্রন্থ
+                লেখক ও প্রচ্ছদ- নোমান সাদী
+                প্রকাশনী- দূরবীণ
+                <h5>গল্প 2</h5>
+                এতক্ষণ একটানা কথা বলার পরে একটু থামল আশরাফ সাহেব। তার চোখের কোনোটা চিকচিক করতে দেখা গেল। আসলে লোকটা যে এত আবেগপ্রবণ সেটা আমার আগে জানা ছিল না। ভিতরে ভিতরে আসলে কান্না করা যায়। আমার মনে হচ্ছে আশরাফ সাহেব এখন ঠিক সেই কাজটি করছেন। ভিতরে ভিতরে কেঁদে যাচ্ছেন আশরাফ সাহেব।
+                সিগারেট আছে আপনার কাছে?
+                আপনি কি সিগারেট খান?
+                কলেজে পড়ার সময় খেতাম। এরপর না খেতে খেতে একসময় অভ্যাস চলে গেছে।
+                নিশিকান্ত বাবু একটা সিগারেট দিলেন আশরাফ সাহেবের হাতে। উনি অনভ্যস্ত হাতে সিগারেট ধরালেন। সিগারেট ধরানোর সময় দেখা গেল তার হাত কাঁপছে।
+                নিশিকান্ত বাবু আপনি কি বলতে পারেন সেদিন রাতে কী ঘটনা ঘটেছিল?
+                পুরোপুরি বলতে পারি না তবে আন্দাজ করতে পারি।
+                আন্দাজ করুন তো।
+                আপনি ওই রাতে পাগলা ফকিরকে খুন করেছিলেন। ঠিক বললাম?
+                তাহলে শুনুন কী হয়েছিল সেদিন। আমি বাবার সাথে ঝগড়া করে নিজের ঘরে গিয়ে কতক্ষণ বসলাম। কিন্তু মনটা কিছুতেই শান্ত হচ্ছিল না। আমাদের একজন পাহরাদার ছিল, কালু। এ পরিবারের যত রকম অপকর্ম খুনখারাবি ওর মাধ্যমে হতো। আর এটা আমরা সবাই জানতাম। ও আমাদের বাড়ির ভিতরেই থাকতো। সারাদিন নেশা করে পড়ে থাকত। রাতে বাড়ি পাহারা দিতো।
+                বই: মধ্যদুপুর
+                লেখক: অঞ্জন আইচ
+                বিক্রয় মূল্য: ২৫০ টাকা
+                প্রচ্ছদ: চারু পিন্টু
+                প্রকাশনী: কিংবদন্তী পাবলিকেশন
+                
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-5">
+                {
+                    allBooks.slice(0, slise).map(book => <DetalAbout key={book.id} book={book}></DetalAbout>)
 
-                His possessiveness is rivaled only by his secretive nature. He knows everything about me, but mystery surrounds him. Shadows threaten the entire university…and our forbidden love.
+                }
 
-                Excerpt
-
-                “It’s okay,” he murmurs. “Pretend you don’t want it.”
-
-                His kiss is urgent, unyielding. He forces my mouth open, allowing me to feign resistance. Or at the very least, nonchalance. I let him tilt my head back and run his lips down my neck. It’s a terrible game I’m playing, letting him take the fall for our mutual destruction.
-
-                I should at least tell him, confess my own desire, even if he already knows.
-
-                It would be the honorable thing to do.
-
-                “Will—”
-
-                “Ah ah,” he says with a slow shake of his head, with a devastating expression of knowing in his dark eyes. “In this office, you will address me as Professor Stratford.”
-
-                My secret muscles clench, and he gives me an almost boyish smile.
-
-                “This gets you hot, doesn’t it, Ms. Hill?”
-
-                How is this possible? I had a heavy course load of classes my freshman year, with professors of every shape and size. They were smart and interesting, and for the most part, at least somewhat arrogant. Professor Stratford is all those things…and more. He’s simply more. More handsome, more mysterious. More playful as he nips at my lower lip.
-
-                “I asked you a direct question, Ms. Hill. Don’t make me punish you.”
-
-                My eyes widen. It’s not an entirely fake break in my voice. “What kind of punishment?”
-
-                “Let’s see,” he says, tugging my T-shirt off, leaving me in my bra. The starkness is enough to make my cheeks burn. He’s fully clothed while I’m shirtless. “For the first offense, I wouldn’t be too harsh. Then again, we can’t have disruptive students, can we?”
-
-                I thought his fist in my hair had been perverse.
-
-                That holding me up against the window had been a wild form of desire.
-
-                This is far worse.
-
-                And far better.
-
-                At least my body thinks so, becoming hot and clenched, swollen around nothing, hungry to have him inside me again, thrusting and thrusting the ache away.
-
-                “I tried to behave,” I tell him, surrendering to the game. Surrendering to him. “I tried to be a good student. It’s just that you were so…distracting.”
-
-                That earns me a dark chuckle. Large, strong hands undress me with calm expediency, as if stacking books or finding the right page. With both care and anticipation.
-
-                At this moment I’m the worn pages of an old copy of Romeo and Juliet.
-
-                He thumbs through my pages.
-
-                “You’d blame your professor for your own lack of focus?”
-
-                I gasp at his touch, low and intimate. It’s too much, and I scoot back to get away from him. That only lands me on the edge of his desk, smooth wood cool beneath my bare ass. “Maybe I can make it up to you?”
-
-                “Extra credit,” he says, musing. “Perhaps an oral report would suffice.”
-
-                Buy on Amazon
-
-
-                About the Author
-
-                Skye Warren is the New York Times bestselling author of dangerous romance. Her books have sold over one million copies. She makes her home in Texas with her loving family, sweet dogs, and evil cat</p>
+                
+            </div>
+           <div className={`flex justify-center ${slise ===allBooks.length ? 'hidden': ''}`}>
+           <button onClick={()=> setslise(allBooks.length)} className="text-xl bg-[#237943] rounded-[15px] my-10  text-white font-medium px-10 py-4 hover:bg-green-400"> Show all</button>
+           </div>
         </div>
     );
 };

@@ -15,6 +15,8 @@ import Errorpage from './component/Errorpage/Errorpage.jsx';
 import Read from './component/Read/Read.jsx';
 import Wishlish from './component/Wishlish/Wishlish.jsx';
 import About from './component/About/About.jsx';
+import AboutDetail from './component/About/AboutDetail.jsx';
+import Contact from './component/Contact/Contact.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/about',
-        loader: () => fetch('../public/book.json'),
+        loader: () => fetch('../public/allbook.json'),
         element: <About></About>
 
       },
@@ -37,6 +39,18 @@ const router = createBrowserRouter([
         path: '/book/:id',
         loader: () => fetch('../public/book.json'),
         element: <Detailpage></Detailpage>
+
+      },
+      {
+        path: '/aboutbook/:id',
+        loader: () => fetch('../public/allbook.json'),
+        element: <AboutDetail></AboutDetail>
+
+      },
+      {
+        path: '/contact',
+        loader: () => fetch('../public/allbook.json'),
+        element: <Contact></Contact>
 
       },
       {

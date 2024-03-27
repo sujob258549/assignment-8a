@@ -3,10 +3,11 @@ import './nav.css'
 
 const Navber = () => {
     const navLink = <>
-    <NavLink className={'text-[18px]  font-medium navber'} to={'/'}>Home</NavLink>
-    <NavLink className={'text-[18px]  font-medium navber'} to={'/Listed'}>Listed Books</NavLink>
-    <NavLink className={'text-[18px]  font-medium navber'} to={'/PagestoRead'}>Pages to Read</NavLink>
-    <NavLink className={'text-[18px]  font-medium navber'} to={'/about'}>About</NavLink>
+    <NavLink className={'text-[16px]  font-medium navber'} to={'/'}>Home</NavLink>
+    <NavLink className={'text-[16px]  font-medium navber'} to={'/Listed'}>Listed Books</NavLink>
+    <NavLink className={'text-[16px]  font-medium navber'} to={'/PagestoRead'}>Pages to Read</NavLink>
+    <NavLink className={'text-[16px]  font-medium navber'} to={'/about'}>About & All Books</NavLink>
+    <NavLink className={'text-[16px]  font-medium navber'} to={'/contact'}>Contact</NavLink>
     </>
     return (
         <div>

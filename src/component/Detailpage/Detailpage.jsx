@@ -30,7 +30,7 @@ const Detailpage = () => {
         setwistlist(wistlist + 1);
         if (wistlist < 1) {
             toast('Add to wistlish');
-            setRedStore(parsid)
+            setwistlist(parsid)
         }
         else {
             toast('Alrady Add  wistlish');
@@ -72,9 +72,10 @@ const Detailpage = () => {
                         <p className="text-sm font-medium flex">Rating:<span className="font-bold ml-28">{book.rating}</span> </p>
 
                         <div className=" flex flex-wrap gap-5 mt-10">
-                            <Link onClick={() => handelRead()} className="btn text-[18px] font-medium hover:text-white px-5 text-[#59C6D2] border hover:bg-[#59C6D2]  border-[#59C6D2]">Read</Link>
-                            <Link onClick={() => handelwishlist()} className="btn  text-[18px] font-medium text-white border px-5 hover:text-[#59C6D2] bg-[#59C6D2]">Wishlist</Link>
+                            <Link onClick={() => handelRead()} className="btn bgColor text-white text-[18px] font-medium  px-5 border-[#23BE0A] borderd border  hover:text-[#23BE0A]">Read</Link>
+                            <Link onClick={() => handelwishlist()} className="btn  text-[18px] font-medium text-white border px-5 hover:text-[#59C6D2] borderd bg-[#59C6D2] border-[#59C6D3]">Wishlist</Link>
                         </div>
+                       
                     </div>
                     <ToastContainer></ToastContainer>
                 </div>

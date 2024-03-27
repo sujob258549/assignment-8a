@@ -1,9 +1,9 @@
 [
     {
-        "bookId": 1,
+        "bookId": 101,
         "bookName": "The Catcher in the Rye",
         "author": "J.D. Salinger",
-        "image": "https://example.com/the-catcher-in-the-rye.jpg",
+        "image": "https://thumbs.dreamstime.com/b/stack-books-isolated-white-background-34637153.jpg",
         "review": "A poignant coming-of-age story with a unique voice.",
         "totalPages": 224,
         "rating": 4.3,
@@ -16,10 +16,10 @@
         "yearOfPublishing": 1951
     },
     {
-        "bookId": 2,
+        "bookId": 102,
         "bookName": "1984",
         "author": "George Orwell",
-        "image": "https://example.com/1984.jpg",
+        "image": "https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg?size=626&ext=jpg&ga=GA1.1.735520172.1711411200&semt=sph",
         "review": "A chilling dystopian vision that remains relevant today.",
         "totalPages": 328,
         "rating": 4.7,
@@ -32,10 +32,10 @@
         "yearOfPublishing": 1949
     },
     {
-        "bookId": 3,
+        "bookId": 103,
         "bookName": "To Kill a Mockingbird",
         "author": "Harper Lee",
-        "image": "https://example.com/to-kill-a-mockingbird.jpg",
+        "image": "https://economictimes.indiatimes.com/thumb/msid-98117504,width-1200,height-900,resizemode-4,imgsize-24942/best-novels-for-beginners.jpg?from=mdr",
         "review": "A timeless exploration of racial injustice and moral growth.",
         "totalPages": 324,
         "rating": 4.8,
@@ -48,10 +48,10 @@
         "yearOfPublishing": 1960
     },
     {
-        "bookId": 4,
+        "bookId": 104,
         "bookName": "The Great Gatsby",
         "author": "F. Scott Fitzgerald",
-        "image": "https://example.com/the-great-gatsby.jpg",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoNhTEHH4e6UkLFqdz98Mc3x5-CalEY14BH8aoKjPiPcGeG2BL8f8qeEsbKkxiGg9X13Q&usqp=CAU",
         "review": "A compelling portrayal of the Jazz Age.",
         "totalPages": 180,
         "rating": 4.5,
@@ -64,10 +64,10 @@
         "yearOfPublishing": 1925
     },
     {
-        "bookId": 5,
+        "bookId": 105,
         "bookName": "Pride and Prejudice",
         "author": "Jane Austen",
-        "image": "https://example.com/pride-and-prejudice.jpg",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149342941.jpg",
         "review": "A delightful comedy of manners with unforgettable characters.",
         "totalPages": 279,
         "rating": 4.9,
@@ -80,10 +80,10 @@
         "yearOfPublishing": 1813
     },
     {
-        "bookId": 6,
+        "bookId": 106,
         "bookName": "Moby-Dick",
         "author": "Herman Melville",
-        "image": "https://example.com/moby-dick.jpg",
+        "image": "https://www.columbiactlibrary.org/wp-content/uploads/2012/10/books.png",
         "review": "An epic tale of obsession and revenge on the high seas.",
         "totalPages": 635,
         "rating": 4.6,
@@ -96,10 +96,10 @@
         "yearOfPublishing": 1851
     },
     {
-        "bookId": 7,
+        "bookId": 107,
         "bookName": "Frankenstein",
         "author": "Mary Shelley",
-        "image": "https://example.com/frankenstein.jpg",
+        "image": "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D",
         "review": "A groundbreaking work of gothic fiction that explores the ethics of creation.",
         "totalPages": 280,
         "rating": 4.4,
@@ -112,10 +112,10 @@
         "yearOfPublishing": 1818
     },
     {
-        "bookId": 8,
+        "bookId": 108,
         "bookName": "The Lord of the Rings",
         "author": "J.R.R. Tolkien",
-        "image": "https://example.com/the-lord-of-the-rings.jpg",
+        "image": "https://st5.depositphotos.com/35742636/66199/i/450/depositphotos_661996710-stock-photo-books-black-background.jpg",
         "review": "A sweeping fantasy epic with rich world-building and unforgettable characters.",
         "totalPages": 1178,
         "rating": 4.9,
@@ -128,10 +128,10 @@
         "yearOfPublishing": 1954
     },
     {
-        "bookId": 9,
+        "bookId": 109,
         "bookName": "Crime and Punishment",
         "author": "Fyodor Dostoevsky",
-        "image": "https://example.com/crime-and-punishment.jpg",
+        "image": "https://st5.depositphotos.com/35742636/69176/i/450/depositphotos_691764722-stock-photo-stack-books-white-background.jpg",
         "review": "An intense psychological exploration of guilt and redemption.",
         "totalPages": 430,
         "rating": 4.7,
@@ -144,10 +144,10 @@
         "yearOfPublishing": 1866
     },
     {
-        "bookId": 10,
+        "bookId": 110,
         "bookName": "Brave New World",
         "author": "Aldous Huxley",
-        "image": "https://example.com/brave-new-world.jpg",
+        "image": "https://celadonbooks.com/wp-content/uploads/2021/02/what-is-nonfiction.gif",
         "review": "A dystopian masterpiece that critiques the dangers of a totalitarian society.",
         "totalPages": 288,
         "rating": 4.5,
@@ -160,10 +160,10 @@
         "yearOfPublishing": 1932
     },
     {
-        "bookId": 11,
+        "bookId": 111,
         "bookName": "The Hobbit",
         "author": "J.R.R. Tolkien",
-        "image": "https://example.com/the-hobbit.jpg",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrLZcusrs26txTvsLs5UYSb0GEVDCxkC0IuQvi2C8fJWl-bV2JZAnQ9GD1UheWF47R2G0&usqp=CAU",
         "review": "An enchanting tale of adventure and friendship.",
         "totalPages": 310,
         "rating": 4.6,
@@ -176,10 +176,10 @@
         "yearOfPublishing": 1937
     },
     {
-        "bookId": 12,
+        "bookId": 112,
         "bookName": "Dracula",
         "author": "Bram Stoker",
-        "image": "https://example.com/dracula.jpg",
+        "image": "https://m.media-amazon.com/images/I/71qy5DlTu+L._AC_UF350,350_QL80_.jpg",
         "review": "A gothic horror classic that has stood the test of time.",
         "totalPages": 418,
         "rating": 4.4,
