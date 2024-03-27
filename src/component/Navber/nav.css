@@ -4,9 +4,12 @@
    
 }
 
- .navber:hover {
+ .navber.active:hover {
     background-color: #23BE0A;
     color: #fff;
+}
+ .navber:hover {
+    background-color: #d4e0d2;
 }
 
 .navber{

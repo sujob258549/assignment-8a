@@ -12,32 +12,44 @@ import Books from './component/Books/Books.jsx';
 import PagestoRead from './component/Pages-to-Read/PagestoRead.jsx';
 import Detailpage from './component/Detailpage/Detailpage.jsx';
 import Errorpage from './component/Errorpage/Errorpage.jsx';
+import Read from './component/Read/Read.jsx';
+import Wishlish from './component/Wishlish/Wishlish.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Hader></Hader>,
     errorElement: <Errorpage></Errorpage>,
     children: [
-     {
-      path: '/',
-      loader: ()=> fetch('../public/book.json'),
-      element: <Home></Home>
-      
-     },
-     {
-      path: '/book/:id',
-      loader: ()=> fetch('../public/book.json'),
-      element: <Detailpage></Detailpage>
-      
-     },
-     {
-      path: '/Listed',
-      element: <Books></Books>
-     },
-     {
-      path: '/PagestoRead',
-      element: <PagestoRead></PagestoRead>
-     }
+      {
+        path: '/',
+        loader: () => fetch('../public/book.json'),
+        element: <Home></Home>
+
+      },
+      {
+        path: '/book/:id',
+        loader: () => fetch('../public/book.json'),
+        element: <Detailpage></Detailpage>
+
+      },
+      {
+        path: '/Listed',
+        element: <Books></Books>,
+        children:[
+          {
+            path:'',
+            element: <Read></Read>
+          },
+          {
+            path:'wishlist',
+            element: <Wishlish></Wishlish>
+          }
+        ]
+      },
+      {
+        path: '/PagestoRead',
+        element: <PagestoRead></PagestoRead>
+      }
     ]
   },
 ]);
