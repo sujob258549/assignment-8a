@@ -16,19 +16,27 @@ const Detailpage = () => {
 
     const handelRead = () => {
         setwistlist(wistlist + 1);
-        // if (wistlist < 1 ) {
-        // }
-
-        toast('Alrady add wistlish');
-        setRedStore(parsid)
+        if (wistlist < 1) {
+            toast('Add to read');
+            setRedStore(parsid)
+        }
+        else {
+            toast('Alrady Add  read');
+        }
     }
+
+
     const handelwishlist = () => {
         setwistlist(wistlist + 1);
-        // if (wistlist < 1 ) {
-        // }
+        if (wistlist < 1) {
+            toast('Add to wistlish');
+            setRedStore(parsid)
+        }
+        else {
+            toast('Alrady Add  wistlish');
+        }
 
-        toast('Alrady add wistlish');
-        setRedStore(parsid)
+
     }
     return (
         <div>
