@@ -11,7 +11,7 @@ const HomeBook = ({ book }) => {
             <NavLink to={`/book/${bookId}`}>
                 <div className="card shadows">
                     <div className="bg-slate-200 px-10 mt-10 rounded-lg mx-10">
-                        <figure><img className=" w-full " src={image} alt="Shoes" /></figure>
+                        <figure><img className="" src={image} alt="Shoes" /></figure>
                     </div>
                     <div className="card-body gap-0">
                         <div className="flex gap-3 flex-wrap">

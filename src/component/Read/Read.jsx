@@ -4,6 +4,7 @@ import { GiNetworkBars } from "react-icons/gi";
 import { CiLocationOn } from "react-icons/ci";
 import './style.css';
 import { getRedStore } from '../Localstorage/readData';
+import { Link } from 'react-router-dom';
 
 const Read = () => {
     const [books, setBooks] = useState([]);
@@ -57,7 +58,7 @@ const Read = () => {
                              <div className="flex  flex-wrap justify-center md:justify-start items-cente">
                                  <h2 className=" text-sm mr-2 font-medium text-center text-[#328EFF] bg-[#328eff3a] px-3 rounded-full py-2 md:py-3 md:px-6">Category: {book.category}</h2>
                                  <h2 className=" text-sm mr-2 font-medium text-[#FFAC33]  text-center bg-[#ffad3333] px-3 rounded-full py-2 md:py-3 md:px-6">Rating: {book.rating}</h2>
-                                 <h2 className="text-sm mr-2 font-medium text-white text-center bgColor px-3 rounded-full py-2 md:py-3 md:px-6">View Details</h2>
+                                 <Link to={`/book/${book.bookId}`} className="btn hover:text-[#23BE0A] borderd bgColor mt-2 rounded-full text-white">View Details</Link>
                              </div>
          
          
