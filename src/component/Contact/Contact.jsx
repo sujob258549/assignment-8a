@@ -46,7 +46,7 @@ const Contact = () => {
     return (
         <div>
 
-            <div className="w-[40%] mx-auto border-2 rounded-xl p-10 mt-10 bg-[#c593932d]">
+            <div className=" w-[80%] md:w-[60%] lg:w-[40%] mx-auto border-2 rounded-xl p-5 md:p-10 mt-10 bg-[#c593932d]">
                 <h3 className='text-3xl text-center font-bold mb-6'>Contact form</h3>
                 <form onSubmit={onsubmits}>
 
