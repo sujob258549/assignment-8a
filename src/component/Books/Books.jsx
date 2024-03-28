@@ -34,13 +34,13 @@ const Books = () => {
         <div>
             <div className="relative">
                 <h2 className="text-3xl fort-bold text-center bg-slate-200 py-5 rounded-lg">Books</h2>
-                <div className="w-32 mx-auto z-50">
-                    <select defaultValue={'DEFAULT'} onChange={(e) => setSortState(e.target.value)} className="select w-full max-w-xs bgColor text-xl text-white font-medium">
+                <div className="w-32 mx-auto z-50 mt-24">
+                    {/* <select defaultValue={'DEFAULT'} onChange={(e) => setSortState(e.target.value)} className="select w-full max-w-xs bgColor text-xl text-white font-medium">
                         <option value="DEFAULT" disabled>Sort</option>
                         <option value="none">No work</option>
                         <option value="ascending">Page</option>
                         <option value="rating">Rating</option>
-                    </select>
+                    </select> */}
                 </div>
                 <div role="tablist" className="tabs w-[90%] z-0 tabs-lifted md:w-[40%] lg:w-[30%] pt-5">
                     <Link to={''} onClick={() => setTab(0)} role="tab" className={`tab border border-black ${tab === 0 ? 'tab-active' : ''}`}>Read Books</Link>

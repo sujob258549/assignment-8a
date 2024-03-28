@@ -1,34 +1,51 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { IoMan } from "react-icons/io5";
 import { GiNetworkBars } from "react-icons/gi";
 import { CiLocationOn } from "react-icons/ci";
 import './style.css';
-import { getRedStore } from '../Localstorage/readData';
 import { Link } from 'react-router-dom';
+import { getwishlish } from '../Localstorage/wishlist';
 
 const Read = () => {
     const [books, setBooks] = useState([]);
     const [allBook, setAllBook] = useState([]);
+    const [sortState, setSortState] = useState("none");
 
     useEffect(() => {
+        // Fetch data from JSON file
         fetch('../../../public/book.json')
             .then(res => res.json())
-            .then(data => setBooks(data))
-
-        const getdatas = getRedStore();
-        const allData = [];
-        for (const getdata of getdatas) {
-            const findData = books.find(book => book.bookId === getdata);
-            if (findData) {
-                allData.push(findData);
-
-            }
-        }
-        setAllBook(allData);
+            .then(data => {
+                setBooks(data);
+                const getdatas = getwishlish();
+                const allData = getdatas.map(getdata => books.find(book => book.bookId === getdata)).filter(Boolean);
+                setAllBook(allData);
+            });
     }, [books]);
 
+    useEffect(() => {
+        const sortedBooks = [...allBook];
+        if (sortState === "ascending") {
+            sortedBooks.sort((a, b) => a.totalPages - b.totalPages);
+        } else if (sortState === "rating") {
+            sortedBooks.sort((a, b) => a.rating - b.rating);
+        } else if (sortState === "year") {
+            sortedBooks.sort((a, b) => a.yearOfPublishing - b.yearOfPublishing);
+        }
+        setAllBook(sortedBooks);
+    }, [sortState, allBook]);
+
+
     return (
-        <div>
+        <div className='relative'>
+            <div className='absolute left-[45%] -top-32'>
+            <select defaultValue={'DEFAULT'} onChange={(e) => setSortState(e.target.value)} className="select w-full max-w-xs bgColor text-xl text-white font-medium">
+                <option value="DEFAULT" disabled>Sort</option>
+                <option value="ascending">Page</option>
+                <option value="rating">Rating</option>
+                <option value="year">Year</option>
+            </select>
+            </div>
             {allBook.map((book, index) => (
                 <div key={index} className="shadow-2xl px-10 mt-5 rounded-md borders">
                     <div className=" flex flex-col md:flex-row gap-10 py-10 items-center ">
