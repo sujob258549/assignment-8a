@@ -15,21 +15,20 @@ const AboutDetail = () => {
     const [isAddedToRead, setIsAddedToRead] = useState(false);
 
     const handleRead = () => {
-        if (!isAddedToRead) {
-            toast('Added to read');
+        if (!isAddedToRead && book) {
+            toast.success('Added to read');
             setRedStore(parsid);
             setIsAddedToRead(true);
         } else {
-            toast('Already added to read');
+            toast.error("Already added to read")
         }
     };
-
     const handleWishlist = () => {
-        if (!isAddedToWishlist) {
+        if (!isAddedToWishlist && book) {
             toast('Added to wishlist');
             setIsAddedToWishlist(true);
-        } else {
-            toast('Already added to wishlist');
+        }else {
+            toast.error("Already added to read")
         }
     };
 

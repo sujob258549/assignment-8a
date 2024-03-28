@@ -3,6 +3,7 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { setRedStore } from "../Localstorage/readData";
+import { FaArrowLeft } from "react-icons/fa";
 
 
 const Detailpage = () => {
@@ -74,6 +75,9 @@ const Detailpage = () => {
                         <div className=" flex flex-wrap gap-5 mt-10">
                             <Link onClick={() => handelRead()} className="btn bgColor text-white text-[18px] font-medium  px-5 border-[#23BE0A] borderd border  hover:text-[#23BE0A]">Read</Link>
                             <Link onClick={() => handelwishlist()} className="btn  text-[18px] font-medium text-white border px-5 hover:text-[#59C6D2] borderd bg-[#59C6D2] border-[#59C6D3]">Wishlist</Link>
+                            <Link to={'/'}><div className="tooltip font-bold" data-tip="Back to Page">
+                                <button className="btn"><FaArrowLeft /></button>
+                            </div></Link>
                         </div>
                        
                     </div>
