@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { setRedStore } from "../Localstorage/readData";
 import { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
+import { setwishlish } from "../Localstorage/wishlist";
 
 const AboutDetail = () => {
     const books = useLoaderData();
@@ -11,27 +12,48 @@ const AboutDetail = () => {
     const parsid = parseInt(id);
 
     const book = books.find(book => book.bookId === parsid);
-    const [isAddedToWishlist, setIsAddedToWishlist] = useState(false);
-    const [isAddedToRead, setIsAddedToRead] = useState(false);
-
+    const [count, setCount] = useState(0);
+    const [reCount, setreCount] = useState(0);
     const handleRead = () => {
-        if (!isAddedToRead && book) {
+        if (count < 1) {
             toast.success('Added to read');
-            setRedStore(parsid);
-            setIsAddedToRead(true);
+            setRedStore(parsid); 
+            setCount(count + 1);
+        } else if (count === 2) {
+            toast.error('Already added to read');
+            setCount(count + 1);
         } else {
-            toast.error("Already added to read")
+            if (reCount === 1) {
+                toast.success('Added to read');
+                setRedStore(parsid);
+                setreCount(reCount + 1)
+            } else {
+                toast.error('Already added to read');
+            }
         }
-    };
-    const handleWishlist = () => {
-        if (!isAddedToWishlist && book) {
-            toast('Added to wishlist');
-            setIsAddedToWishlist(true);
-        }else {
-            toast.error("Already added to read")
-        }
-    };
+    }
 
+    const handleWishlist = () => {
+        if (count === 1) {
+            if (reCount === 1) {
+                toast.error('Added to wishlist');
+            }
+            else {
+                toast.error('Alrady add to read');
+            }
+        }
+        if (count <= 0) {
+            setwishlish(parsid);
+            setCount(count + 1);
+            setreCount(reCount + 1)
+            toast.success('Added to wishlist');
+        }
+        else if (count === 2) {
+            toast.error('Alrady add to read')
+        }
+    }
+
+  
     return (
         <div>
 

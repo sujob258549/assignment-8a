@@ -1,5 +1,5 @@
 const getRedStore = () => {
-    const localdata = localStorage.getItem('datas');
+    const localdata = localStorage.getItem('readlist');
     if (localdata) {
         return JSON.parse(localdata)
     }
@@ -13,7 +13,7 @@ const setRedStore = id => {
     const finddata = cLocaldata.find(data => data === id);
     if (!finddata) {
         cLocaldata.push(id);
-        localStorage.setItem('datas', JSON.stringify(cLocaldata));
+        localStorage.setItem('readlist', JSON.stringify(cLocaldata));
     }
 }
 

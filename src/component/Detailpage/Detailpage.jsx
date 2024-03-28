@@ -1,9 +1,11 @@
-import { useState } from "react";
+
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { setRedStore } from "../Localstorage/readData";
 import { FaArrowLeft } from "react-icons/fa";
+import { setwishlish } from "../Localstorage/wishlist";
+import { useState } from "react";
 
 
 const Detailpage = () => {
@@ -11,34 +13,50 @@ const Detailpage = () => {
     const { id } = useParams();
     const parsid = parseInt(id);
     const book = books.find(book => book.bookId === parseInt(id));
-
-
-    const [wistlist, setwistlist] = useState(0);
-
+    const [count, setCount] = useState(0);
+    const [reCount, setreCount] = useState(0);
     const handelRead = () => {
-        setwistlist(wistlist + 1);
-        if (wistlist < 1) {
-            toast('Add to read');
-            setRedStore(parsid)
-        }
-        else {
-            toast('Alrady Add  read');
+        if (count < 1) {
+            toast.success('Added to read');
+            setRedStore(parsid); 
+            setCount(count + 1);
+        } else if (count === 2) {
+            toast.error('Already added to read');
+            setCount(count + 1);
+        } else {
+            if (reCount === 1) {
+                toast.success('Added to read');
+                setRedStore(parsid);
+                setreCount(reCount + 1)
+            } else {
+                toast.error('Already added to read');
+            }
         }
     }
-
 
     const handelwishlist = () => {
-        setwistlist(wistlist + 1);
-        if (wistlist < 1) {
-            toast('Add to wistlish');
-            setwistlist(parsid)
+        if (count === 1) {
+            if (reCount === 1) {
+                toast.error('Added to wishlist');
+            }
+            else {
+                toast.error('Alrady add to read');
+            }
         }
-        else {
-            toast('Alrady Add  wistlish');
+        if (count <= 0) {
+            setwishlish(parsid);
+            setCount(count + 1);
+            setreCount(reCount + 1)
+            toast.success('Added to wishlist');
         }
-
-
+        else if (count === 2) {
+            toast.error('Alrady add to read')
+        }
+        // else {
+        //     toast.error('Alrady add to read');
+        // }
     }
+
     return (
         <div>
             {
@@ -79,7 +97,7 @@ const Detailpage = () => {
                                 <button className="btn"><FaArrowLeft /></button>
                             </div></Link>
                         </div>
-                       
+
                     </div>
                     <ToastContainer></ToastContainer>
                 </div>

@@ -26,7 +26,7 @@ const Contact = () => {
     const onsubmits = e => {
         e.preventDefault();
         if (password.length < 6) {
-            setError('আপনার পাঁচওয়ার্ড নাম্বার টা ১১ ডিজিট করুন');
+            setError('আপনার পাঁচওয়ার্ড নাম্বার টা ৬ ডিজিট করুন');
         }
         else {
             setError('')
@@ -53,7 +53,7 @@ const Contact = () => {
 
                     <label className="input input-bordered flex items-center gap-2 mt-4">
 
-                        <input type="text" onChange={nameChange} name="name" className="grow focus:m-0 focus:outline-none focus:border-none " placeholder="Your name" required />
+                        <input type="text" onChange={nameChange} name="name" className="grow focus:m-0 focus:p-0 focus:outline-none focus:border-none " placeholder="Your name" required />
                     </label>
                     <label className="input input-bordered flex items-center gap-2 mt-4">
                         <input type="text" onChange={emailChange} name="email" className="grow focus:outline-none focus:border-none " placeholder="Email" />
@@ -67,10 +67,11 @@ const Contact = () => {
                         <input type="password" onChange={passwordChange} name="password" placeholder="password" className="grow focus:outline-none focus:border-none " required />
                     </label>
 
-                    <label className="input input-bordered flex items-center gap-2 mt-4">
+                    {/* <label className="input input-bordered flex items-center gap-2 mt-4">
                         <input type="submit" className="grow" value="Logine" />
 
-                    </label>
+                    </label> */}
+                    <button type="submit" className="btn btn-secondary shadows w-[95%] mx-auto flex justify-center mt-5 border">Submit Now</button>
                 </form>
                 <p className="mt-5 font-semibold text-xl text-red-600"> {error}</p>
                 <p className="mt-5 font-semibold text-xl text-red-600"> {nerror}</p>

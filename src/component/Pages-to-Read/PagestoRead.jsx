@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 
@@ -105,7 +105,7 @@ const PagestoRead = () => {
     };
 
     return (
-        <div className=' py-10 pr-10 rounded-xl mt-10 bg-[#faf8f8]'>
+        <div className=' py-10 pr-10 rounded-xl mt-10 bg-[#f1eeee]'>
             <ResponsiveContainer width="100%" height={500}>
             <BarChart
                 data={data}
