@@ -4,12 +4,11 @@ import { GiNetworkBars } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { getwishlish } from "../Localstorage/wishlist";
 import { useEffect, useState } from "react";
-import { BallTriangle } from 'react-loader-spinner'
+// import { BallTriangle } from 'react-loader-spinner'
 
 const Wishlish = () => {
-    const [books, setBooks] = useState([]);
     const [allBook, setAllBook] = useState([]);
-    const [loader , setloder] = useState(true)
+    // const [loader , setloder] = useState(true)
 
 
     useEffect(() => {
@@ -17,14 +16,13 @@ const Wishlish = () => {
         fetch('/book.json')
             .then(res => res.json())
             .then(data => {
-                setBooks(data);
                 const getdatas = getwishlish();
-                const allData = getdatas.map(getdata => books.find(book => book.bookId === getdata)).filter(Boolean);
+                const allData = getdatas.map(getdata => data.find(book => book.bookId === getdata)).filter(Boolean);
                 setAllBook(allData);
                 
             });
-            setloder(false);
-    }, [books]);
+            // setloder(false);
+    }, []);
     const [sortState, setSortState] = useState("none");
 
     useEffect(() => {
@@ -36,7 +34,7 @@ const Wishlish = () => {
         } else if (sortState === "year") {
             sortedBooks.sort((a, b) => a.yearOfPublishing - b.yearOfPublishing);
         }
-        setAllBook(sortedBooks);
+        // setAllBook(sortedBooks);
     }, [sortState, allBook]);
 
     return (
@@ -50,7 +48,7 @@ const Wishlish = () => {
                     <option value="year">Year</option>
                 </select>
             </div>
-            <div className="absolute top-[20%] md:top-[200px] left-[35%] md:left-[50%]">
+            {/* <div className="absolute top-[20%] md:top-[200px] left-[35%] md:left-[50%]">
             { loader && <BallTriangle
                 height={100}
                 width={100}
@@ -62,7 +60,7 @@ const Wishlish = () => {
                 visible={true}
             />}
 
-            </div>
+            </div> */}
 
             {allBook.map((book, index) => (
                 <div key={index} className="shadow-2xl px-5 md:px-10 md:mt-5 mt-2 -top-2 rounded-md borders">

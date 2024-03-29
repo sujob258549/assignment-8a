@@ -4,12 +4,13 @@ import { GiNetworkBars } from "react-icons/gi";
 import { CiLocationOn } from "react-icons/ci";
 import './style.css';
 import { Link } from 'react-router-dom';
-import { getwishlish } from '../Localstorage/wishlist';
 import { BallTriangle } from 'react-loader-spinner'
+import { getRedStore } from '../Localstorage/readData';
+
 
 
 const Read = () => {
-    const [books, setBooks] = useState([]);
+   
     const [allBook, setAllBook] = useState([]);
     const [sortState, setSortState] = useState("none");
     const [loader , setloder] = useState(true)
@@ -19,13 +20,12 @@ const Read = () => {
         fetch('/book.json')
             .then(res => res.json())
             .then(data => {
-                setBooks(data);
-                const getdatas = getwishlish();
-                const allData = getdatas.map(getdata => books.find(book => book.bookId === getdata)).filter(Boolean);
+                const getdatas = getRedStore();
+                const allData = getdatas.map(getdata => data.find(book => book.bookId === getdata)).filter(Boolean);
                 setAllBook(allData);
             });
              setloder(false)
-    }, [books]);
+    }, []);
 
     useEffect(() => {
         const sortedBooks = [...allBook];
@@ -36,7 +36,6 @@ const Read = () => {
         } else if (sortState === "year") {
             sortedBooks.sort((a, b) => a.yearOfPublishing - b.yearOfPublishing);
         }
-        setAllBook(sortedBooks);
     }, [sortState, allBook]);
 
 
