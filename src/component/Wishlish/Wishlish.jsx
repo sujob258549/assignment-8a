@@ -4,12 +4,12 @@ import { GiNetworkBars } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { getwishlish } from "../Localstorage/wishlist";
 import { useEffect, useState } from "react";
-// import { BallTriangle } from 'react-loader-spinner'
+import { BallTriangle } from 'react-loader-spinner'
 
 const Wishlish = () => {
     const [allBook, setAllBook] = useState([]);
-    // const [loader , setloder] = useState(true)
-
+    const [loader, setLoader] = useState(true);
+    const [sortState, setSortState] = useState("none");
 
     useEffect(() => {
         // Fetch data from JSON file
@@ -18,49 +18,43 @@ const Wishlish = () => {
             .then(data => {
                 const getdatas = getwishlish();
                 const allData = getdatas.map(getdata => data.find(book => book.bookId === getdata)).filter(Boolean);
-                setAllBook(allData);
                 
+                let sortedBooks = [...allData];
+                if (sortState === "totalpage") {
+                    sortedBooks.sort((a, b) => a.totalPages - b.totalPages); // Reverse the order for ascending
+                } else if (sortState === "rating") {
+                    sortedBooks.sort((a, b) => a.rating - b.rating);
+                } else if (sortState === "year") {
+                    sortedBooks.sort((a, b) => a.yearOfPublishing - b.yearOfPublishing);
+                }
+                setAllBook(sortedBooks);
+               
             });
-            // setloder(false);
-    }, []);
-    const [sortState, setSortState] = useState("none");
-
-    useEffect(() => {
-        const sortedBooks = [...allBook];
-        if (sortState === "totalpage") {
-            sortedBooks.sort((a, b) => a.totalPages - b.totalPages);
-        } else if (sortState === "rating") {
-            sortedBooks.sort((a, b) => a.rating - b.rating);
-        } else if (sortState === "year") {
-            sortedBooks.sort((a, b) => a.yearOfPublishing - b.yearOfPublishing);
-        }
-        // setAllBook(sortedBooks);
-    }, [sortState, allBook]);
+            setLoader(false);
+    }, [sortState]); 
 
     return (
-
         <div className="relative">
             <div className='absolute left-[35%] md:left-[45%] -top-32'>
                 <select defaultValue={'DEFAULT'} onChange={(e) => setSortState(e.target.value)} className="select w-full max-w-xs bgColor text-xl text-white font-medium">
                     <option value="DEFAULT" disabled>Sort</option>
-                    <option value="ascending">Page</option>
+                    <option value="totalpage">Page</option>
                     <option value="rating">Rating</option>
                     <option value="year">Year</option>
                 </select>
             </div>
-            {/* <div className="absolute top-[20%] md:top-[200px] left-[35%] md:left-[50%]">
-            { loader && <BallTriangle
-                height={100}
-                width={100}
-                radius={5}
-                color="#4fa94d"
-                ariaLabel="ball-triangle-loading"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-            />}
-
-            </div> */}
+            <div className="absolute top-[20%] md:top-[200px] left-[35%] md:left-[50%]">
+                {loader && <BallTriangle
+                    height={100}
+                    width={100}
+                    radius={5}
+                    color="#4fa94d"
+                    ariaLabel="ball-triangle-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                />}
+            </div>
 
             {allBook.map((book, index) => (
                 <div key={index} className="shadow-2xl px-5 md:px-10 md:mt-5 mt-2 -top-2 rounded-md borders">
@@ -95,11 +89,9 @@ const Wishlish = () => {
                                 <Link to={`/book/${book.bookId}`} className="btn hover:text-[#23BE0A] borderd bgColor mt-2 rounded-full text-white">View Details</Link>
                             </div>
                         </div>
-
                     </div>
                 </div>
             ))}
-
         </div>
     );
 };

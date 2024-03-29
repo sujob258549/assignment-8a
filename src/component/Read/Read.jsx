@@ -10,10 +10,10 @@ import { getRedStore } from '../Localstorage/readData';
 
 
 const Read = () => {
-   
+
     const [allBook, setAllBook] = useState([]);
     const [sortState, setSortState] = useState("none");
-    const [loader , setloder] = useState(true)
+    const [loader, setLoader] = useState(true)
 
     useEffect(() => {
         // Fetch data from JSON file
@@ -22,45 +22,46 @@ const Read = () => {
             .then(data => {
                 const getdatas = getRedStore();
                 const allData = getdatas.map(getdata => data.find(book => book.bookId === getdata)).filter(Boolean);
-                setAllBook(allData);
+                
+                let sortedBooks = [...allData];
+                if (sortState === "totalpage") {
+                    sortedBooks.sort((a, b) => a.totalPages - b.totalPages); // Reverse the order for ascending
+                } else if (sortState === "rating") {
+                    sortedBooks.sort((a, b) => a.rating - b.rating);
+                } else if (sortState === "year") {
+                    sortedBooks.sort((a, b) => a.yearOfPublishing - b.yearOfPublishing);
+                }
+                setAllBook(sortedBooks);
             });
-             setloder(false)
-    }, []);
+            setLoader(false);
+           
+    }, [sortState]); 
 
-    useEffect(() => {
-        const sortedBooks = [...allBook];
-        if (sortState === "totalbook") {
-            sortedBooks.sort((a, b) => a.totalPages - b.totalPages);
-        } else if (sortState === "rating") {
-            sortedBooks.sort((a, b) => a.rating - b.rating);
-        } else if (sortState === "year") {
-            sortedBooks.sort((a, b) => a.yearOfPublishing - b.yearOfPublishing);
-        }
-    }, [sortState, allBook]);
+
 
 
     return (
         <div className='relative'>
-              <div className='absolute left-[35%] md:left-[45%] -top-32'>
-            <select defaultValue={'DEFAULT'} onChange={(e) => setSortState(e.target.value)} className="select w-full max-w-xs bgColor text-xl text-white font-medium">
-                <option value="DEFAULT" disabled>Sort</option>
-                <option value="ascending">Page</option>
-                <option value="rating">Rating</option>
-                <option value="year">Year</option>
-            </select>
-            <div className="absolute top-[200px] md:top-[200px] left-[35%] md:left-[40%]">
-            { loader && <BallTriangle
-                height={100}
-                width={100}
-                radius={5}
-                color="#4fa94d"
-                ariaLabel="ball-triangle-loading"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-            />}
+            <div className='absolute left-[35%] md:left-[45%] -top-32'>
+                <select defaultValue={'DEFAULT'} onChange={(e) => setSortState(e.target.value)} className="select w-full max-w-xs bgColor text-xl text-white font-medium">
+                    <option value="DEFAULT" disabled>Sort</option>
+                    <option value="totalpage">Page</option>
+                    <option value="rating">Rating</option>
+                    <option value="year">Year</option>
+                </select>
+                <div className="absolute top-[200px] md:top-[200px] left-[35%] md:left-[40%]">
+                    {loader && <BallTriangle
+                        height={100}
+                        width={100}
+                        radius={5}
+                        color="#4fa94d"
+                        ariaLabel="ball-triangle-loading"
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                        visible={true}
+                    />}
 
-            </div>
+                </div>
             </div>
             {allBook.map((book, index) => (
                 <div key={index} className="shadow-2xl px-5 md:px-10 mt-5 rounded-md borders">
