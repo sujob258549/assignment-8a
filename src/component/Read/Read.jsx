@@ -5,15 +5,18 @@ import { CiLocationOn } from "react-icons/ci";
 import './style.css';
 import { Link } from 'react-router-dom';
 import { getwishlish } from '../Localstorage/wishlist';
+import { BallTriangle } from 'react-loader-spinner'
+
 
 const Read = () => {
     const [books, setBooks] = useState([]);
     const [allBook, setAllBook] = useState([]);
     const [sortState, setSortState] = useState("none");
+    const [loader , setloder] = useState(true)
 
     useEffect(() => {
         // Fetch data from JSON file
-        fetch('../../../public/book.json')
+        fetch('/book.json')
             .then(res => res.json())
             .then(data => {
                 setBooks(data);
@@ -21,6 +24,7 @@ const Read = () => {
                 const allData = getdatas.map(getdata => books.find(book => book.bookId === getdata)).filter(Boolean);
                 setAllBook(allData);
             });
+             setloder(false)
     }, [books]);
 
     useEffect(() => {
@@ -45,6 +49,19 @@ const Read = () => {
                 <option value="rating">Rating</option>
                 <option value="year">Year</option>
             </select>
+            <div className="absolute top-[200px] md:top-[200px] left-[35%] md:left-[40%]">
+            { loader && <BallTriangle
+                height={100}
+                width={100}
+                radius={5}
+                color="#4fa94d"
+                ariaLabel="ball-triangle-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+            />}
+
+            </div>
             </div>
             {allBook.map((book, index) => (
                 <div key={index} className="shadow-2xl px-5 md:px-10 mt-5 rounded-md borders">
